@@ -1,6 +1,6 @@
 package padroesestruturais;
 
-public class Classe {
+public class Classe extends Acessorio {
 
     private String tipoClasse;
 
@@ -12,13 +12,16 @@ public class Classe {
         this.tipoClasse = tipoClasse;
     }
 
-    public Classe(String tipoClasse) {
+    public Classe(String descricao, String tipoClasse) {
+        super(descricao);
         this.tipoClasse = tipoClasse;
     }
 
-    public String getConteudo() {
+    @Override
+    public String getAcessorio() {
         return "Classe: " + this.getTipoClasse() + " - Tipo da Classe: " + this.tipoClasse + "\n";
     }
+
 
 }
 
